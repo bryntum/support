@@ -2,10 +2,10 @@
 An issues-only repository for the Bryntum suite of JavaScript components. Please report any bugs, feature requests etc. under [issues](https://github.com/bryntum/support/issues)
  
 
-* Grid
-* Scheduler,
-* Scheduler Pro
-* Gantt
+* <a href="http://bryntum.com/products/grid">Grid</a>
+* <a href="http://bryntum.com/products/scheduler">Scheduler</a>
+* <a href="http://bryntum.com/products/scheduler">Scheduler Pro</a>
+* <a href="http://bryntum.com/products/gantt">Gantt</a>
 
 <table align="center">
 <tr>
