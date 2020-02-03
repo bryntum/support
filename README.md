@@ -7,14 +7,15 @@ An issues-only repository for the Bryntum suite of JavaScript components. Please
 * <a href="http://bryntum.com/products/scheduler">Scheduler Pro</a>
 * <a href="http://bryntum.com/products/gantt">Gantt</a>
 
+<h2>Build Statuses</h2>
 <table align="center">
 <tr>
-    <th style="text-align:center"></th>
-    <th style="text-align:center"><img width="50" src="https://bryntum.com/temp/browserlogos/chrome_256x256.png" alt="Chrome"/></th>
-    <th style="text-align:center"><img width="50" src="https://bryntum.com/temp/browserlogos/firefox_256x256.png" alt="Firefox"/></th>
-    <th style="text-align:center"><img width="50" src="https://bryntum.com/temp/browserlogos/edge_256x256.png" alt="Edge"/></th>
-    <th style="text-align:center"><img width="50" src="https://bryntum.com/temp/browserlogos/safari_256x256.png" alt="Safari"/></th>
-    <th style="text-align:center"><img width="50" src="https://bryntum.com/temp/browserlogos/ie_256x256.png" alt="Safari"/></th>
+    <th align="left">Product</th>
+    <th><img width="50" src="https://bryntum.com/temp/browserlogos/chrome_256x256.png" alt="Chrome"/></th>
+    <th><img width="50" src="https://bryntum.com/temp/browserlogos/firefox_256x256.png" alt="Firefox"/></th>
+    <th><img width="50" src="https://bryntum.com/temp/browserlogos/edge_256x256.png" alt="Edge"/></th>
+    <th><img width="50" src="https://bryntum.com/temp/browserlogos/safari_256x256.png" alt="Safari"/></th>
+    <th><img width="50" src="https://bryntum.com/temp/browserlogos/ie_256x256.png" alt="Safari"/></th>
 </tr>
 <tr>
     <td nowrap style="white-space: nowrap">Bryntum Grid</td>
