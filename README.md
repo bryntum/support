@@ -17,6 +17,14 @@ An issues-only repository for the Bryntum suite of JavaScript components. Please
     <th><img width="50" src="https://bryntum.com/temp/browserlogos/safari_256x256.png" alt="Safari"/></th>
     <th><img width="50" src="https://bryntum.com/temp/browserlogos/ie_256x256.png" alt="Safari"/></th>
 </tr>
+ <tr>
+    <td nowrap style="white-space: nowrap">Bryntum Core Widgets</td>
+    <td style="text-align:center"><img alt="Chrome build status" src="http://teamcity.bryntum.com/app/rest/builds/buildType:(id:Core_CoreInChrome),branch:release/statusIcon.svg"/></td>
+    <td style="text-align:center"><img alt="Firefox build status" src="http://teamcity.bryntum.com/app/rest/builds/buildType:(id:Core_CoreInFirefox),branch:release/statusIcon.svg"/></td>
+    <td style="text-align:center"><img alt="Edge build status" src="http://teamcity.bryntum.com/app/rest/builds/buildType:(id:Core_CoreInEdge),branch:release/statusIcon.svg"/></td>
+    <td style="text-align:center"><img alt="Safari build status" src="http://teamcity.bryntum.com/app/rest/builds/buildType:(id:Core_CoreInSafari),branch:release/statusIcon.svg"/></td>
+    <td style="text-align:center"><img alt="IE11 build status" src="http://teamcity.bryntum.com/app/rest/builds/buildType:(id:Core_CoreInIE11),branch:release/statusIcon.svg"/></td>
+</tr>
 <tr>
     <td nowrap style="white-space: nowrap">Bryntum Grid</td>
     <td style="text-align:center"><img alt="Chrome build status" src="http://teamcity.bryntum.com/app/rest/builds/buildType:(id:VanillaGrid_VanillaGridInChrome),branch:release/statusIcon.svg"/></td>
