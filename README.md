@@ -1,5 +1,5 @@
 # Bryntum support repo
-An issues-only repository for the Bryntum suite of JavaScript components. Please report any bugs, feature requests etc. under [issues](https://github.com/bryntum/support/issues)
+An issues-only repository for the Bryntum suite of JavaScript components. Please report any bugs or ideas on feature requests under [issues](https://github.com/bryntum/support/issues)
  
 
 * <a href="http://bryntum.com/products/grid">Grid</a>
