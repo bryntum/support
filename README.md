@@ -48,7 +48,7 @@ An issues-only repository for the Bryntum suite of JavaScript components. Please
     <td style="text-align:center"><img alt="Firefox build status" src="http://teamcity.bryntum.com/app/rest/builds/buildType:(id:SchedulerPro_SchedulerProInFirefox),branch:release/statusIcon.svg"/></td>
     <td style="text-align:center"><img alt="Edge build status" src="http://teamcity.bryntum.com/app/rest/builds/buildType:(id:SchedulerPro_SchedulerProInEdge),branch:release/statusIcon.svg"/></td>
     <td style="text-align:center"><img alt="Safari build status" src="http://teamcity.bryntum.com/app/rest/builds/buildType:(id:SchedulerPro_SchedulerProInSafari),branch:release/statusIcon.svg"/></td>
-    <td style="text-align:center"><i>Not supported</i></td>
+    <td style="text-align:center"><i>Unsupported</i></td>
 </tr>
 <tr>
     <td nowrap style="white-space: nowrap">Bryntum Gantt</td>
@@ -56,7 +56,7 @@ An issues-only repository for the Bryntum suite of JavaScript components. Please
     <td style="text-align:center"><img alt="Firefox build status" src="http://teamcity.bryntum.com/app/rest/builds/buildType:(id:VanillaGantt_VanillaGanttInFirefox),branch:release/statusIcon.svg"/></td>
     <td style="text-align:center"><img alt="Edge build status" src="http://teamcity.bryntum.com/app/rest/builds/buildType:(id:VanillaGantt_VanillaGanttInEdge),branch:release/statusIcon.svg"/></td>
     <td style="text-align:center"><img alt="Safari build status" src="http://teamcity.bryntum.com/app/rest/builds/buildType:(id:VanillaGantt_VanillaGanttInSafari),branch:release/statusIcon.svg"/></td>
-    <td style="text-align:center"><i>Not supported</i></td>
+    <td style="text-align:center"><i>Unsupported</i></td>
 </tr>
 </table>
 
