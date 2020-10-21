@@ -60,3 +60,4 @@ An issues-only repository for the Bryntum suite of JavaScript components. Please
 </tr>
 </table>
 
+IE11 / Legacy Edge will be supported until May 1st 2021
