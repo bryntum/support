@@ -9,7 +9,7 @@ An issues-only repository for the Bryntum suite of JavaScript components. Please
 * <a href="http://bryntum.com/products/calendar">Calendar</a>
 
 <h2>Build Statuses</h2>
-<table align="center">
+<table>
 <tr>
     <th align="left">Product</th>
     <th><img width="50" src="https://bryntum.com/temp/browserlogos/chrome_256x256.png" alt="Chrome"/></th>
