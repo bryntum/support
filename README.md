@@ -14,7 +14,7 @@ An issues-only repository for the Bryntum suite of JavaScript components. Please
     <th align="left">Product</th>
     <th><img width="50" src="https://bryntum.com/temp/browserlogos/chrome_256x256.png" alt="Chrome"/></th>
     <th><img width="50" src="https://bryntum.com/temp/browserlogos/firefox_256x256.png" alt="Firefox"/></th>
-    <th><img width="50" src="https://bryntum.com/temp/browserlogos/edge_256x256.png?a" alt="Edge"/></th>
+    <th><img width="50" src="https://bryntum.com/temp/browserlogos/edge_modern_256x256.png?a" alt="Edge"/></th>
     <th><img width="50" src="https://bryntum.com/temp/browserlogos/safari_256x256.png" alt="Safari"/></th>
 </tr>
  <tr>
