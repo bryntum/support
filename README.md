@@ -60,5 +60,3 @@ An issues-only repository for the Bryntum suite of JavaScript components. Please
     <td style="text-align:center"><img alt="Safari build status" src="http://teamcity.bryntum.com/app/rest/builds/buildType:(id:VanillaProducts_Calendar_CalendarInSafari),branch:release/statusIcon.svg"/></td>
 </tr>
 </table>
-
-IE11 / Legacy Edge will be supported until May 1st 2021
