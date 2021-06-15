@@ -7,6 +7,7 @@ An issues-only repository for the Bryntum suite of JavaScript components. Please
 * <a href="http://bryntum.com/products/scheduler-pro">Scheduler Pro</a>
 * <a href="http://bryntum.com/products/gantt">Gantt</a>
 * <a href="http://bryntum.com/products/calendar">Calendar</a>
+* <a href="http://bryntum.com/products/taskboard">Kanban Task Board</a>
 
 <h2>Build Statuses</h2>
 <table>
