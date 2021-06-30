@@ -60,4 +60,11 @@ An issues-only repository for the Bryntum suite of JavaScript components. Please
     <td style="text-align:center"><img alt="Edge build status" src="http://teamcity.bryntum.com/app/rest/builds/buildType:(id:VanillaProducts_Calendar_CalendarInEdge),branch:release/statusIcon.svg"/></td>
     <td style="text-align:center"><img alt="Safari build status" src="http://teamcity.bryntum.com/app/rest/builds/buildType:(id:VanillaProducts_Calendar_CalendarInSafari),branch:release/statusIcon.svg"/></td>
 </tr>
+ <tr>
+    <td nowrap style="white-space: nowrap">Bryntum TaskBoard</td>
+    <td style="text-align:center"><img alt="Chrome build status" src="http://teamcity.bryntum.com/app/rest/builds/buildType:(id:VanillaTaskBoard_VanillaTaskBoardInChrome),branch:release/statusIcon.svg"/></td>
+    <td style="text-align:center"><img alt="Firefox build status" src="http://teamcity.bryntum.com/app/rest/builds/buildType:(id:VanillaTaskBoard_VanillaTaskBoardInFirefox),branch:release/statusIcon.svg"/></td>
+    <td style="text-align:center"><img alt="Edge build status" src="http://teamcity.bryntum.com/app/rest/builds/buildType:(id:VanillaTaskBoard_VanillaTaskBoardInEdge),branch:release/statusIcon.svg"/></td>
+    <td style="text-align:center"><img alt="Safari build status" src="http://teamcity.bryntum.com/app/rest/builds/buildType:(id:VanillaTaskBoard_VanillaTaskBoardInSafari),branch:release/statusIcon.svg"/></td>
+</tr>
 </table>
