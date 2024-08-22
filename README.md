@@ -11,4 +11,4 @@ An issues-only repository for the Bryntum suite of JavaScript components. Please
 
 <h2>Build Statuses</h2>
 
-For build statuses for our nightly builds, see https://dev.bryntum.com/teamcity
+For build statuses for our nightly builds, see our [Build status](https://dev.bryntum.com/teamcity) page.
