@@ -1,3 +1,5 @@
+![Bryntum](./Github-header.png)
+
 # What's Bryntum?
 
 Bryntum is a Swedish software company creating advanced JavaScript UI components for enterprise-grade web applications. Founded by a team of passionate web developers, Bryntum specializes in providing cutting-edge scheduling, resource management, and data visualization solutions for modern front-end frameworks. Learn more about our products below:
