@@ -36,6 +36,9 @@ This repo is an issues-only repository for the Bryntum JS library. If you find a
 ## License
 The Bryntum JS library is distributed under a commercial license. See Bryntum’s [license terms](//bryntum.com/licensing/) for additional information.
 
+## Contact
+If you have any questions, feel free to reach out to us through our [Contact form](//bryntum.com/contact).
+
 ## Build Statuses
 
 For build statuses for our nightly builds, see our [Build status](//dev.bryntum.com/teamcity) page.
