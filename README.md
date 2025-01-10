@@ -2,7 +2,7 @@
 
 # What's Bryntum?
 
-Bryntum is a Swedish software company creating advanced JavaScript UI components for enterprise-grade web applications. Founded by a team of passionate web developers, Bryntum specializes in providing cutting-edge scheduling, resource management, and data visualization solutions for modern front-end frameworks. Learn more about our products below:
+<a href="//bryntum.com">Bryntum</a> is a Swedish software company creating advanced JavaScript UI components for enterprise-grade web applications. Founded by a team of passionate web developers, Bryntum specializes in providing cutting-edge scheduling, resource management, and data visualization solutions for modern front-end frameworks. Learn more about our products below:
 
 * <a href="//bryntum.com/products/grid">Grid</a>
 * <a href="//bryntum.com/products/scheduler">Scheduler</a>
