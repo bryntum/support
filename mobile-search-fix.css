@@ -1,0 +1,279 @@
+/* 
+ * Mobile Search Field Visibility Fix
+ * 
+ * This CSS file addresses issue #11678 where the example browser's search field
+ * is not visible on mobile devices.
+ * 
+ * Apply this CSS to your example browser to ensure search functionality
+ * remains accessible on mobile devices.
+ */
+
+/* Force search field visibility on all screen sizes */
+.search-field,
+.example-browser-search,
+.bryntum-search-input,
+input[type="search"],
+.search-container input {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Mobile-first responsive design for search */
+@media (max-width: 768px) {
+    
+    /* Ensure search container is full width and visible */
+    .search-container,
+    .search-wrapper,
+    .example-search-container {
+        display: flex !important;
+        width: 100% !important;
+        margin-bottom: 15px !important;
+        order: -1 !important; /* Move search to top */
+        flex-direction: row !important;
+    }
+    
+    /* Search field mobile styling */
+    .search-field,
+    .example-browser-search,
+    .bryntum-search-input {
+        width: 100% !important;
+        min-width: 200px !important;
+        padding: 12px 15px !important;
+        font-size: 16px !important; /* Prevent iOS zoom */
+        border: 1px solid #ccc !important;
+        border-radius: 4px !important;
+        background: white !important;
+        color: #333 !important;
+        flex: 1 !important;
+    }
+    
+    /* Search button mobile styling */
+    .search-button,
+    .search-btn,
+    button[type="submit"] {
+        padding: 12px 15px !important;
+        margin-left: 5px !important;
+        min-width: 44px !important; /* Minimum touch target */
+        min-height: 44px !important;
+        border: none !important;
+        background: #2196F3 !important;
+        color: white !important;
+        border-radius: 4px !important;
+        cursor: pointer !important;
+    }
+    
+    /* Header layout adjustments */
+    .example-browser-header,
+    .demo-header,
+    .bryntum-header {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        padding: 15px !important;
+        gap: 10px !important;
+    }
+    
+    /* Logo and navigation adjustments */
+    .logo,
+    .brand,
+    .example-title {
+        text-align: center !important;
+        margin-bottom: 10px !important;
+        order: 0 !important;
+    }
+    
+    /* Navigation items */
+    .nav-items,
+    .navigation,
+    .menu-items {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 10px !important;
+        order: 1 !important;
+    }
+    
+    /* Hide elements that might interfere with search visibility */
+    .desktop-only {
+        display: none !important;
+    }
+    
+    /* Ensure no elements are hidden by overflow */
+    .header-content,
+    .example-browser-content {
+        overflow: visible !important;
+    }
+}
+
+/* Extra small screens (phones in portrait) */
+@media (max-width: 480px) {
+    
+    .search-field,
+    .example-browser-search,
+    .bryntum-search-input {
+        font-size: 16px !important; /* Prevent zoom */
+        padding: 14px 15px !important; /* Larger touch targets */
+        min-height: 44px !important;
+    }
+    
+    .search-button,
+    .search-btn {
+        padding: 14px 15px !important;
+        min-width: 44px !important;
+        min-height: 44px !important;
+    }
+    
+    .example-browser-header,
+    .demo-header {
+        padding: 10px !important;
+    }
+}
+
+/* Focus states for accessibility */
+.search-field:focus,
+.example-browser-search:focus,
+.bryntum-search-input:focus {
+    outline: 2px solid #2196F3 !important;
+    outline-offset: 2px !important;
+    box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2) !important;
+}
+
+.search-button:focus,
+.search-btn:focus {
+    outline: 2px solid white !important;
+    outline-offset: 2px !important;
+}
+
+/* Common search field selectors - add more as needed */
+input[placeholder*="search" i],
+input[placeholder*="Search" i],
+input[placeholder*="filter" i],
+input[placeholder*="Filter" i],
+.filter-field,
+.search-input,
+#search,
+#filter,
+.example-filter {
+    display: block !important;
+    visibility: visible !important;
+}
+
+/* Flexbox utilities for search container */
+.search-flex {
+    display: flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+}
+
+@media (max-width: 768px) {
+    .search-flex {
+        width: 100% !important;
+    }
+}
+
+/* Grid/flexbox parent containers that might hide search */
+.header-grid,
+.toolbar,
+.demo-toolbar {
+    position: relative !important;
+    overflow: visible !important;
+}
+
+@media (max-width: 768px) {
+    .header-grid,
+    .toolbar,
+    .demo-toolbar {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+}
+
+/* Override any display: none on mobile */
+@media (max-width: 768px) {
+    .search-field[style*="display: none"],
+    .example-browser-search[style*="display: none"],
+    .search-container[style*="display: none"] {
+        display: block !important;
+    }
+}
+
+/* Placeholder styling for better visibility */
+.search-field::placeholder,
+.example-browser-search::placeholder,
+.bryntum-search-input::placeholder {
+    color: #666 !important;
+    opacity: 1 !important;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .search-field,
+    .example-browser-search,
+    .bryntum-search-input {
+        border: 2px solid #000 !important;
+        background: white !important;
+        color: black !important;
+    }
+}
+
+/* Print styles - hide search in print */
+@media print {
+    .search-container,
+    .search-field,
+    .search-button {
+        display: none !important;
+    }
+}
+
+/* Animation for smooth transitions */
+.search-container {
+    transition: all 0.3s ease !important;
+}
+
+/* Specific overrides for common frameworks/themes */
+
+/* Bootstrap overrides */
+.navbar .search-field,
+.navbar-nav .search-field {
+    display: block !important;
+    width: 100% !important;
+}
+
+/* Material Design overrides */
+.mdc-text-field input[type="search"],
+.mat-form-field input[type="search"] {
+    display: block !important;
+    visibility: visible !important;
+}
+
+/* Bryntum-specific overrides */
+.b-toolbar .search-field,
+.b-header .search-field {
+    display: block !important;
+    flex: 1 !important;
+}
+
+@media (max-width: 768px) {
+    .b-toolbar,
+    .b-header {
+        flex-direction: column !important;
+    }
+    
+    .b-toolbar .search-field,
+    .b-header .search-field {
+        width: 100% !important;
+        margin: 10px 0 !important;
+        order: -1 !important;
+    }
+}
+
+/* Debugging helper - remove in production */
+.debug-search {
+    border: 2px solid red !important;
+    background: yellow !important;
+}
+
+/* Use this class to test search field visibility:
+   Add 'debug-search' class to search elements */

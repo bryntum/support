@@ -33,6 +33,24 @@ This repo is an issues-only repository for the Bryntum JS library. If you find a
 4. **Engage with the Community**  
    - Check back often to respond to any follow-up questions from Bryntum’s team or other community members. 
 
+## Mobile Search Field Visibility Fix
+
+**Issue #11678 Fix Available**: If you're experiencing issues with search fields not being visible on mobile devices in Bryntum example browsers, we've provided a comprehensive fix:
+
+### Quick Fix Options:
+
+1. **CSS Only**: Include `mobile-search-fix.css` in your example browser
+2. **JavaScript Enhanced**: Include `mobile-search-fix.js` for dynamic handling
+3. **Complete Example**: See `mobile-search-example.html` for a working implementation
+
+### Files:
+- [`MOBILE_SEARCH_GUIDANCE.md`](MOBILE_SEARCH_GUIDANCE.md) - Complete implementation guide
+- [`mobile-search-fix.css`](mobile-search-fix.css) - CSS-only solution
+- [`mobile-search-fix.js`](mobile-search-fix.js) - JavaScript utility with auto-detection
+- [`mobile-search-example.html`](mobile-search-example.html) - Working example
+
+These resources ensure search functionality remains accessible across all mobile devices and screen sizes.
+
 ## License
 The Bryntum JS library is distributed under a commercial license. See Bryntum’s [license terms](//bryntum.com/licensing/) for additional information.
 
