@@ -26,8 +26,8 @@ If applicable, add screenshots or log output to help explain your problem.
 
 ### Environment
 - OS: [e.g. Windows 10, macOS 13]
-- Browser [e.g. Chrome 118, Firefox 120]
-- Bryntum Version [e.g. v6.3.2]
+- Browser: [e.g. Chrome 118, Firefox 120]
+- Bryntum Version: [e.g. v6.3.2]
 - Other relevant details
 
 ### Additional Context
