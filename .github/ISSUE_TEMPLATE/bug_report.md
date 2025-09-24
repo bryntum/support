@@ -10,10 +10,14 @@ assignees: ''
 A clear and concise description of the issue.
 
 ### Steps to Reproduce
+Reproduce the issue in one of our [official demos](https://bryntum.com/examples) and describe the exact steps:
+
 1. Go to '...'
 2. Click on '...'
 3. Scroll down to '...'
-4. See error
+4. See the error
+
+If the issue cannot be reproduced in our demos, please provide a **minimal reproducible test case** (e.g. CodeSandbox, GitHub repo, or zipped project). Bug reports without reproduction steps or a test case may be closed.
 
 ### Expected Behavior
 What you expected to happen.
