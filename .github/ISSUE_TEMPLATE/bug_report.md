@@ -17,7 +17,7 @@ Reproduce the issue in one of our [official demos](https://bryntum.com/examples)
 3. Scroll down to '...'
 4. See the error
 
-If the issue cannot be reproduced in our demos, please provide a **minimal reproducible test case** (e.g. CodeSandbox, GitHub repo, or zipped project). Bug reports without clear reproduction steps or a test case are more likely to be fixed earlier than those without.
+If the issue cannot be reproduced in our demos, please provide a **minimal reproducible test case** (e.g. CodeSandbox, GitHub repo, or zipped project). Bug reports with clear reproduction steps or a test case are more likely to be fixed earlier than those without.
 
 ### Expected Behavior
 What you expected to happen.
