@@ -39,10 +39,8 @@
     min-width: fit-content;
     /* Or use a separate config if needed: */
     /* width: var(--value-label-width, auto); */
-}
-
-/* Optional: If value labels need specific styling */
-.b-slider .b-value-label {
+    
+    /* Optional styling for value labels */
     padding: 0.5em 1em;
     border-radius: 0.5em;
     text-align: center;

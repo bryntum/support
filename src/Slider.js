@@ -82,26 +82,4 @@ class Slider {
     }
 }
 
-/**
- * SCSS/LESS approach - Use separate CSS variables
- */
-const styleFixExample = `
-    .b-slider {
-        display: flex;
-        align-items: center;
-        
-        // Field label uses labelWidth config
-        .b-label {
-            width: var(--field-label-width);
-        }
-        
-        // Value label should NOT use labelWidth
-        // It should be independent
-        .b-value-label {
-            width: auto; // or var(--value-label-width) if needed
-            min-width: fit-content;
-        }
-    }
-`;
-
 export default Slider;
