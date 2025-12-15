@@ -1,0 +1,60 @@
+--- a/lib/Core/widget/Slider.js
++++ b/lib/Core/widget/Slider.js
+@@ -XXX,XX +XXX,XX @@ export default class Slider extends Field {
+     
+     /**
+-     * Updates label width for all labels in the slider
++     * Updates label width for the field label only
++     * The value display label should maintain its own independent width
+      * @param {Number|String} width - The width value
+      * @private
+      */
+     updateLabelWidth(width) {
+-        // Previous implementation applied width to all labels
+-        const labels = this.element.querySelectorAll('.b-label, .b-value-label');
+-        labels.forEach(label => {
+-            if (width != null) {
+-                label.style.width = DomHelper.setLength(width);
+-            } else {
+-                label.style.width = '';
+-            }
+-        });
++        // Only apply width to the field label element, not the value display
++        const fieldLabel = this.element.querySelector('.b-label');
++        
++        if (fieldLabel) {
++            if (width != null) {
++                fieldLabel.style.width = DomHelper.setLength(width);
++            } else {
++                fieldLabel.style.width = '';
++            }
++        }
+     }
+     
+ }
+
+--- a/lib/Core/widget/Slider.scss
++++ b/lib/Core/widget/Slider.scss
+@@ -XXX,XX +XXX,XX @@
+ .b-slider {
+     display: flex;
+     align-items: center;
+     
+     .b-label {
++        // Field label width can be controlled by labelWidth config
+         flex-shrink: 0;
+     }
+     
+     .b-slider-track {
+         flex: 1;
+     }
+     
+     .b-value-label {
+-        // Previous: was inheriting or being set by labelWidth config
++        // Value label should have independent width
++        // Not affected by labelWidth configuration
++        width: auto;
++        min-width: fit-content;
+         flex-shrink: 0;
+     }
+ }

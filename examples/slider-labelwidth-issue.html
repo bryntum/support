@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider labelWidth Issue - Before Fix</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #1a1a1a;
+            color: white;
+        }
+        .slider-container {
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .field-label {
+            /* This width is affected by labelWidth config */
+            width: 150px;
+            text-align: left;
+        }
+        .slider-track {
+            flex: 1;
+            max-width: 300px;
+            height: 8px;
+            background: #444;
+            border-radius: 4px;
+            position: relative;
+        }
+        .slider-thumb {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            position: absolute;
+            top: -8px;
+            cursor: pointer;
+        }
+        .value-label {
+            /* BUG: This is incorrectly affected by labelWidth setting */
+            /* Should have its own width, not inherit from labelWidth */
+            width: 150px; /* This should NOT be set by labelWidth config */
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 18px;
+        }
+        
+        .slider-1 .slider-thumb { background: #4a9eff; left: 65%; }
+        .slider-1 .value-label { background: #4a9eff; }
+        
+        .slider-2 .slider-thumb { background: #ff9544; left: 80%; }
+        .slider-2 .value-label { background: #ff9544; }
+        
+        .slider-3 .slider-thumb { background: #6db56d; left: 20%; }
+        .slider-3 .value-label { background: #6db56d; }
+        
+        h1 { font-size: 48px; margin-bottom: 5px; }
+        .subtitle { color: #888; font-size: 18px; margin-bottom: 40px; }
+        .issue-note {
+            background: #ffcc00;
+            color: #000;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Slider</h1>
+    <p class="subtitle">Range slider control</p>
+    
+    <div class="issue-note">
+        <strong>ISSUE:</strong> The value labels (65, 80, 2) are being affected by the labelWidth setting.
+        They should have their own independent width, not be constrained by the field label width.
+    </div>
+    
+    <div class="slider-container slider-1">
+        <div class="field-label">Volume</div>
+        <div class="slider-track">
+            <div class="slider-thumb"></div>
+        </div>
+        <div class="value-label">65</div>
+    </div>
+    
+    <div class="slider-container slider-2">
+        <div class="field-label">Brightness</div>
+        <div class="slider-track">
+            <div class="slider-thumb"></div>
+        </div>
+        <div class="value-label">80</div>
+    </div>
+    
+    <div class="slider-container slider-3">
+        <div class="field-label">Bass</div>
+        <div class="slider-track">
+            <div class="slider-thumb"></div>
+        </div>
+        <div class="value-label">2</div>
+    </div>
+</body>
+</html>

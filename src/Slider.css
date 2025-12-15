@@ -1,0 +1,50 @@
+/**
+ * Slider Component - CSS Fix for labelWidth issue
+ * 
+ * ISSUE: The labelWidth config was affecting both the field label and the value label.
+ * FIX: Ensure labelWidth only applies to the field label, not the value display.
+ */
+
+/* Base slider styles */
+.b-slider {
+    display: flex;
+    align-items: center;
+    gap: var(--slider-gap, 1em);
+}
+
+/* Field label - SHOULD be affected by labelWidth config */
+.b-slider .b-label {
+    /* This width should be controlled by labelWidth config */
+    width: var(--field-label-width, auto);
+    flex-shrink: 0;
+}
+
+/* Slider input/track container */
+.b-slider .b-slider-track {
+    flex: 1;
+}
+
+/* BEFORE FIX: Value label was incorrectly inheriting width from labelWidth */
+/*
+.b-slider .b-value-label {
+    width: var(--field-label-width, auto);  // WRONG - should not use field-label-width
+}
+*/
+
+/* AFTER FIX: Value label has its own independent width */
+.b-slider .b-value-label {
+    /* Value label should NOT be affected by labelWidth config */
+    /* It should have its own width property or be auto-sized */
+    width: auto;
+    min-width: fit-content;
+    /* Or use a separate config if needed: */
+    /* width: var(--value-label-width, auto); */
+}
+
+/* Optional: If value labels need specific styling */
+.b-slider .b-value-label {
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    text-align: center;
+    white-space: nowrap;
+}
