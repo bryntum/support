@@ -10,8 +10,19 @@ The Slider component's `labelWidth` configuration was incorrectly being applied 
 
 ## 📸 Visual Evidence
 
-See the original issue screenshot showing value labels that are too wide:
+### Original Issue
+The value labels are constrained by the labelWidth setting, appearing too wide:
 ![Issue Screenshot](https://github.com/user-attachments/assets/01b15610-d530-406c-ab0f-5f2fa741e76b)
+
+### Before Fix (Demo)
+Our example demonstrating the problem - value labels are unnecessarily wide:
+![Before Fix Demo](https://github.com/user-attachments/assets/0b5b75a7-84bc-4698-b18b-9f023a9662f3)
+
+### After Fix (Demo)
+Our example showing the corrected behavior - value labels size to content:
+![After Fix Demo](https://github.com/user-attachments/assets/4479872d-924e-479d-8c4e-8b4450076bb2)
+
+**Key Difference**: Notice how the value labels (65, 80, 2) are now compact and properly sized in the "after" screenshot, while they were stretched wide in the "before" screenshot.
 
 ## 📁 Repository Structure
 
