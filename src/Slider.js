@@ -1,9 +1,25 @@
 // Fix for labelWidth affecting value label
-// Only target .b-label selector in updateLabelWidth(), not .b-value-label
+// In compose method, only apply labelWidth to internalLabel (field label),
+// not to the value label element
 
-updateLabelWidth(width) {
-    const fieldLabel = this.element.querySelector('.b-label');
-    if (fieldLabel && width != null) {
-        fieldLabel.style.width = DomHelper.setLength(width);
-    }
+compose() {
+    const { labelWidth } = this;
+    
+    return {
+        class: {
+            // ...existing classes
+        },
+        children: {
+            // Field label - should be affected by labelWidth
+            internalLabel: labelWidth && {
+                style: {
+                    width: DomHelper.setLength(labelWidth)
+                }
+            },
+            // Value label - should NOT be affected by labelWidth
+            valueLabel: {
+                // width remains auto/default, not constrained by labelWidth
+            }
+        }
+    };
 }
