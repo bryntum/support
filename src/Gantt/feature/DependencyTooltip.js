@@ -11,7 +11,8 @@
  * - {@link #event-beforeDependencyDelete} - Fired before a dependency is deleted via the delete button on the dependency line.
  *   This event is preventable.
  *
- * @extends Core/mixin/Events
+ * Note: In the actual Bryntum implementation, this class would extend Core/mixin/Events
+ * or be part of a feature that does. This is a simplified reference implementation.
  */
 export default class DependencyTooltip {
     

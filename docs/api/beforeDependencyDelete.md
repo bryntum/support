@@ -62,13 +62,13 @@ const gantt = new Gantt({
     listeners: {
         async beforeDependencyDelete({ dependency }) {
             // Show confirmation dialog
-            const result = await MessageDialog.confirm({
+            const confirmed = await MessageDialog.confirm({
                 title: 'Delete Dependency',
                 message: `Are you sure you want to delete the dependency from "${dependency.sourceTask.name}" to "${dependency.targetTask.name}"?`
             });
             
-            // Return false to prevent deletion if user cancelled
-            return result === MessageDialog.yesButton;
+            // Return the result (true = allow deletion, false = prevent)
+            return confirmed;
         }
     }
 });

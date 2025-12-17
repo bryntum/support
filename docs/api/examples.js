@@ -45,8 +45,8 @@ const gantt2 = new Gantt({
                 cancelButton: 'Cancel'
             });
             
-            // Return false if user clicked Cancel
-            return result === MessageDialog.yesButton;
+            // Result is true if OK was clicked, false if cancelled
+            return result;
         }
     }
 });
