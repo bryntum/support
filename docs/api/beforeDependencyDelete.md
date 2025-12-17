@@ -60,11 +60,15 @@ const gantt = new Gantt({
     // ... other config
     
     listeners: {
-        async beforeDependencyDelete({ dependency }) {
+        async beforeDependencyDelete({ dependency, source }) {
+            // Get the task objects to display names
+            const fromTaskObj = source.taskStore.getById(dependency.fromTask);
+            const toTaskObj = source.taskStore.getById(dependency.toTask);
+            
             // Show confirmation dialog
             const confirmed = await MessageDialog.confirm({
                 title: 'Delete Dependency',
-                message: `Are you sure you want to delete the dependency from "${dependency.sourceTask.name}" to "${dependency.targetTask.name}"?`
+                message: `Are you sure you want to delete the dependency from "${fromTaskObj?.name}" to "${toTaskObj?.name}"?`
             });
             
             // Return the result (true = allow deletion, false = prevent)

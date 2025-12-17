@@ -249,7 +249,7 @@ StartTest(t => {
         
         t.is(gantt.dependencyStore.count, 2, 'Initially has 2 dependencies');
         
-        // Try to delete dependency 2 (should be prevented)
+            // Try to delete dependency 2 (should be prevented)
         await t.click('.b-gantt-dependency[data-dependency-id="2"]');
         await t.click('.b-dependency-delete-btn[data-dependency-id="2"]');
         

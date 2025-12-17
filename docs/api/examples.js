@@ -32,10 +32,12 @@ const gantt2 = new Gantt({
     appendTo: 'container',
     
     listeners: {
-        async beforeDependencyDelete({ dependency }) {
-            // Get task names for better UX
-            const fromTask = dependency.sourceTask?.name || 'Unknown';
-            const toTask = dependency.targetTask?.name || 'Unknown';
+        async beforeDependencyDelete({ dependency, source }) {
+            // Get task objects to display names
+            const fromTaskObj = source.taskStore.getById(dependency.fromTask);
+            const toTaskObj = source.taskStore.getById(dependency.toTask);
+            const fromTask = fromTaskObj?.name || 'Unknown';
+            const toTask = toTaskObj?.name || 'Unknown';
             
             // Show confirmation dialog
             const result = await MessageDialog.confirm({
@@ -230,12 +232,12 @@ const gantt7 = new Gantt({
                 
                 gantt7.deletionTimer = setTimeout(async () => {
                     const count = gantt7.deletionQueue.length;
-                    const result = await MessageDialog.confirm({
+                    const confirmed = await MessageDialog.confirm({
                         title: 'Delete Multiple Dependencies',
                         message: `Delete ${count} dependencies?`
                     });
                     
-                    if (result !== MessageDialog.yesButton) {
+                    if (!confirmed) {
                         // Cancel all deletions
                         gantt7.deletionQueue = [];
                     }
