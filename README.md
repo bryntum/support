@@ -45,3 +45,11 @@ For build statuses for our nightly builds, see our [Build status](//dev.bryntum.
 
 
 _Thank you for using Bryntum! We’re excited to see what you’ll build with our tools._
+
+## Implementation Specifications
+
+This repository also contains reference implementations for features being developed:
+
+- **[beforeDependencyDelete Event](./SUMMARY.md)**: Implementation guide for adding a preventable event when clicking the delete button on dependency lines in Gantt
+
+See individual implementation documents for complete details, tests, and usage examples.
