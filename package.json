@@ -1,0 +1,28 @@
+{
+  "name": "bryntum-support-haschanges-fix",
+  "version": "1.0.0",
+  "description": "Demonstration of the fix for Container hasChanges issue with Combo async store loading",
+  "main": "src/Container.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:simple": "node tests/Container.t.js"
+  },
+  "keywords": [
+    "bryntum",
+    "container",
+    "combo",
+    "hasChanges"
+  ],
+  "author": "Bryntum Support",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/tests/**/*.t.js"
+    ]
+  }
+}
