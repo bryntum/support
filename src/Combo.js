@@ -92,6 +92,7 @@ class Store {
         this.isLoaded = false;
         this.listeners = [];
         this.url = config.url;
+        this._loadPromise = null;
         
         // Simulate async loading if URL is provided
         if (this.url) {
@@ -102,11 +103,25 @@ class Store {
     }
     
     load() {
-        // Simulate async load
-        setTimeout(() => {
-            this.isLoaded = true;
-            this.notifyListeners('load');
-        }, 10);
+        // Simulate async load and expose promise for testing
+        this._loadPromise = new Promise(resolve => {
+            setTimeout(() => {
+                this.isLoaded = true;
+                this.notifyListeners('load');
+                resolve();
+            }, 10);
+        });
+        return this._loadPromise;
+    }
+    
+    /**
+     * Wait for store to be loaded - useful for testing
+     */
+    async waitForLoad() {
+        if (this.isLoaded) {
+            return Promise.resolve();
+        }
+        return this._loadPromise || Promise.resolve();
     }
     
     ion(config) {

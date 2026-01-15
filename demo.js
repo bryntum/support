@@ -11,6 +11,13 @@ function wait(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+async function waitForStoreLoad(store) {
+    if (store && store.waitForLoad) {
+        return store.waitForLoad();
+    }
+    return wait(50);
+}
+
 async function demonstrateIssue() {
     console.log('='.repeat(70));
     console.log('DEMONSTRATION: Container hasChanges Issue with Async Store Loading');
@@ -72,7 +79,7 @@ async function demonstrateIssue() {
     });
     
     console.log('⏳ Waiting for async store to load...');
-    await wait(50);
+    await waitForStoreLoad(asyncStore);
     
     console.log(`✓ Combo value: ${asyncCombo.value}`);
     console.log(`✓ Container hasChanges: ${asyncContainer.hasChanges}`);
@@ -106,7 +113,7 @@ async function demonstrateIssue() {
         items: [userCombo]
     });
     
-    await wait(50);
+    await waitForStoreLoad(userStore);
     
     console.log(`Initial state:`);
     console.log(`  - Combo value: ${userCombo.value}`);

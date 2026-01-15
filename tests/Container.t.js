@@ -12,9 +12,20 @@ const { Combo, Store } = require('../src/Combo');
 
 /**
  * Helper function to wait for async operations
+ * @deprecated Use store.waitForLoad() for more reliable testing
  */
 function wait(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+/**
+ * Helper to wait for store to load
+ */
+async function waitForStoreLoad(store) {
+    if (store && store.waitForLoad) {
+        return store.waitForLoad();
+    }
+    return wait(50);
 }
 
 // Run tests
@@ -41,7 +52,8 @@ if (require.main === module) {
             const combo2 = new Combo({ name: 'test', value: 1, store: store2 });
             const container2 = new Container({ items: [combo2] });
             
-            await wait(50);
+            // Wait for store to load using reliable method
+            await waitForStoreLoad(store2);
             console.log(`  hasChanges: ${container2.hasChanges} (expected: false)`);
             console.log(`  value: ${combo2.value} (expected: 1)`);
             console.log(`  ✓ Test 2 ${!container2.hasChanges && combo2.value === 1 ? 'PASSED' : 'FAILED'}`);
@@ -54,7 +66,8 @@ if (require.main === module) {
             const combo3 = new Combo({ name: 'test', value: 1, store: store3 });
             const container3 = new Container({ items: [combo3] });
             
-            await wait(50);
+            // Wait for store to load using reliable method
+            await waitForStoreLoad(store3);
             const noChangesInitially = !container3.hasChanges;
             combo3.value = 2;
             const hasChangesAfterEdit = container3.hasChanges;
