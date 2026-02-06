@@ -1,0 +1,36 @@
+{
+  "name": "bryntum-support-ics-fix",
+  "version": "1.0.0",
+  "description": "Fix for ICS export issue with all-day events in Bryntum Scheduler/Calendar",
+  "main": "lib/Core/helper/DateHelper.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "demo": "node Scheduler/model/TimeSpan.js"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/tests/**/*.t.js"
+    ],
+    "collectCoverageFrom": [
+      "lib/**/*.js",
+      "Scheduler/**/*.js"
+    ]
+  },
+  "keywords": [
+    "ics",
+    "icalendar",
+    "bryntum",
+    "scheduler",
+    "calendar",
+    "all-day-events",
+    "outlook"
+  ],
+  "author": "Bryntum",
+  "license": "Commercial",
+  "devDependencies": {
+    "jest": "^29.0.0"
+  }
+}
