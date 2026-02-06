@@ -107,6 +107,11 @@ describe('DateHelper', () => {
                 expect(() => DateHelper.format('not a date', 'u')).toThrow('Invalid date provided');
             });
 
+            it('should throw error for invalid Date instance', () => {
+                const invalidDate = new Date('invalid');
+                expect(() => DateHelper.format(invalidDate, 'u')).toThrow('Invalid date provided');
+            });
+
             it('should throw error for unsupported format', () => {
                 expect(() => DateHelper.format(testDate, 'invalid')).toThrow('Unsupported format');
             });
