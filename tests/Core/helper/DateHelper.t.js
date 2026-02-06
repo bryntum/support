@@ -81,7 +81,7 @@ describe('DateHelper', () => {
 
             it('should include Z suffix', () => {
                 const result = DateHelper.format(testDate, 'uZ');
-                expect(result).toEndWith('Z');
+                expect(result.endsWith('Z')).toBe(true);
             });
         });
 
