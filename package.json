@@ -7,7 +7,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "demo": "node Scheduler/model/TimeSpan.js"
+    "demo": "node Scheduler/model/TimeSpan.js",
+    "visual": "node visual-example.js"
   },
   "jest": {
     "testEnvironment": "node",
