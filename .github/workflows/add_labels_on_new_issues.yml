@@ -33,3 +33,6 @@ jobs:
           # Allow specific GitHub CLI commands needed for labeling
           claude_args: |
             --allowedTools "Bash(gh issue view *),Bash(gh label list),Bash(gh issue edit *)"
+           
+          # Disable @claude comment trigger - only run on issue open
+          trigger_phrase: ""
