@@ -1,0 +1,191 @@
+:root, :host {
+    --b-grid-splitter-zindex                      : 10;
+    --b-region-resize-splitter-width              : var(--b-splitter-size);
+    --b-region-resize-splitter-width-hover        : var(--b-splitter-hover-size);
+    --b-region-resize-splitter-touch-width-hover  : var(--b-splitter-touch-hover-size);
+    --b-region-resize-splitter-collapsed-width    : var(--b-region-resize-splitter-width);
+    --b-region-resize-splitter-color              : var(--b-splitter-color);
+    --b-region-resize-button-color                : var(--b-splitter-button-icon-color);
+    --b-region-resize-splitter-hover-color        : var(--b-splitter-hover-color);
+    --b-region-resize-button-hover-color          : var(--b-splitter-button-hover-color);
+    --bi-grid-splitter-button-size                : var(--b-splitter-button-size, 1em);
+    --bi-grid-splitter-button-display             : flex;
+}
+
+.b-grid-base.b-split {
+    --b-grid-splitter-color : var(--b-region-resize-splitter-color);
+
+    .b-grid-splitter:not(.b-disabled) {
+        --b-grid-splitter-width : var(--b-region-resize-splitter-width);
+    }
+
+    @media (pointer : coarse) {
+        --b-region-resize-splitter-width-hover : var(--b-region-resize-splitter-touch-width-hover);
+    }
+}
+
+.b-grid-splitter {
+    position       : relative;
+    pointer-events : var(--bi-grid-splitter-pointer-events, none);
+    z-index        : var(--b-grid-splitter-zindex);
+
+    @media (any-pointer : coarse) {
+        --bi-grid-splitter-button-size : var(--b-splitter-touch-button-size, 1.3em);
+    }
+}
+
+.b-split .b-grid-splitter {
+    --bi-grid-splitter-pointer-events : all;
+}
+
+.b-grid-splitter.b-disabled {
+    --bi-grid-splitter-pointer-events : none;
+}
+
+.b-grid-base.b-split {
+    &.b-rtl .b-grid-splitter-inner .b-grid-splitter-buttons {
+        .b-grid-splitter-button-collapse,
+        .b-grid-splitter-button-expand {
+            scale : -1;
+        }
+
+        .b-grid-splitter-button-expand {
+            justify-content : flex-end;
+        }
+
+        .b-grid-splitter-button-collapse {
+            justify-content : flex-start;
+        }
+    }
+
+    .b-grid-splitter:where(:not(.b-disabled)) {
+        overflow : visible;
+
+        .b-grid-splitter-inner {
+            position        : absolute;
+            inset-block     : 0;
+            left            : 50%;
+            translate       : -50%;
+            background      : inherit;
+            flex-direction  : column;
+            align-items     : center;
+            opacity         : 0;
+            transition      : opacity .2s;
+            display         : var(--bi-grid-splitter-button-display);
+            width           : var(--b-region-resize-splitter-width-hover);
+        }
+
+        &.b-grid-splitter-collapsed {
+            cursor                 : initial;
+            --b-grid-splitter-width : var(--b-region-resize-splitter-collapsed-width);
+            --b-grid-splitter-color : var(--b-region-resize-splitter-hover-color);
+
+            .b-grid-splitter-inner {
+                opacity : 1;
+            }
+
+            &:not(.b-grid-splitter-allow-collapse) .b-grid-splitter-button-collapse,
+            &.b-grid-splitter-allow-collapse .b-grid-splitter-button-expand {
+                visibility : hidden;
+            }
+
+            .b-grid-splitter-buttons {
+                --bi-grid-splitter-buttons-opacity : 1;
+                --bi-grid-splitter-buttons-scale   : 1;
+            }
+        }
+
+        &.b-left-only:not(.b-grid-splitter-collapsed) .b-grid-splitter-button-expand,
+        &.b-right-only:not(.b-grid-splitter-collapsed) .b-grid-splitter-button-collapse {
+            visibility : hidden;
+        }
+
+        .b-grid-splitter-buttons {
+            display     : flex;
+            position    : absolute;
+            translate   : 0 -50%;
+            height      : 2.4em;
+            width       : 2.4em;
+            transition  : scale .1s, opacity .1s;
+            opacity     : var(--bi-grid-splitter-buttons-opacity, 0);
+            scale       : var(--bi-grid-splitter-buttons-scale, 0);
+            font-size   : var(--bi-grid-splitter-button-size);
+        }
+
+        .b-grid-splitter-button-collapse,
+        .b-grid-splitter-button-expand {
+            flex            : 1;
+            cursor          : pointer;
+            display         : flex;
+            align-items     : center;
+            background      : var(--b-grid-splitter-color);
+
+            &:hover {
+                --b-region-resize-button-color : var(--b-region-resize-button-hover-color);
+            }
+        }
+
+        .b-grid-splitter-button-collapse {
+            border-top-left-radius    : 100% 50%;
+            border-bottom-left-radius : 100% 50%;
+            justify-content           : flex-end;
+            padding-right             : .1em;
+        }
+
+        .b-grid-splitter-button-expand {
+            border-top-right-radius    : 100% 50%;
+            border-bottom-right-radius : 100% 50%;
+            padding-left               : .1em;
+        }
+
+        .b-grid-splitter-button-icon {
+            cursor : pointer;
+            height : 1.5em;
+            fill   : var(--b-region-resize-button-color);
+        }
+
+        &.b-hover,
+        &.b-partner-splitter-hover,
+        &.b-touching,
+        &.b-moving {
+            --b-grid-splitter-color                  : var(--b-region-resize-splitter-hover-color);
+            --bi-region-resize-splitter-inner-width  : var(--b-region-resize-splitter-width-hover);
+
+            .b-grid-splitter-inner {
+                opacity : 1;
+            }
+
+            &:not(.b-partner-splitter-hover) {
+                --bi-grid-splitter-buttons-scale   : 1;
+                --bi-grid-splitter-buttons-opacity : 1;
+            }
+        }
+    }
+}
+
+.b-grid-base.b-split:not(.b-grid-splitter-no-drag) .b-grid-splitter:not(.b-disabled, .b-grid-splitter-collapsed) .b-grid-splitter-inner {
+    cursor : col-resize;
+}
+
+.b-grid-header-scroller.b-collapsed,
+.b-grid-footer-scroller.b-collapsed,
+.b-virtual-scroller.b-collapsed {
+    width     : 0;
+    min-width : 0 !important;
+}
+
+.b-grid-splitter-button-collapse .b-splitter-button-touch-area {
+    left : -.9em;
+}
+
+.b-grid-splitter-button-expand .b-splitter-button-touch-area {
+    right : -.9em;
+}
+
+.b-drag-helper-active .b-grid-base.b-split .b-grid-splitter {
+    pointer-events : none !important;
+}
+
+.b-hide-splitter-buttons {
+    --bi-grid-splitter-button-display : none;
+}
