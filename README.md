@@ -41,7 +41,7 @@ If you have any questions, feel free to reach out to us through our [Contact for
 
 ## Build Statuses
 
-For build statuses for our nightly builds, see our [Build status](//dev.bryntum.com/teamcity) page.
+For build statuses for our nightly builds, see our [Build status](//dev.bryntum.com/status) page.
 
 
 _Thank you for using Bryntum! We’re excited to see what you’ll build with our tools._
